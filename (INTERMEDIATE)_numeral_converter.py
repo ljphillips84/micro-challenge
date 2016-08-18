@@ -1,3 +1,9 @@
+'''
+Converts roman numerals into ints and back, uses recursive solving by default
+however, this can be solved iteratively as well.
+'''
+
+#Required information for converting roman numerals into int
 lookuptable = [("M", 1000),
                ("CM", 900),
                ("D", 500),
@@ -11,6 +17,9 @@ lookuptable = [("M", 1000),
                ("I", 1)]
 
 def convert_to_roman (number, output=""):
+    '''Takes a number as an int, and returns a string of roman numerals
+       with the same value.
+    '''
     if number == 0:
         return output
     for i in lookuptable:
@@ -18,6 +27,9 @@ def convert_to_roman (number, output=""):
             return convert_to_roman((number-i[1]), output+i[0])
 
 def convert_to_english (romanstring, outnum=0):
+    '''Takes a string of roman numerals, and returns an integer with
+       the same value
+    '''
     if len(romanstring) == 0:
         return outnum
     for i in lookuptable:
