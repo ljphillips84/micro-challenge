@@ -1,6 +1,12 @@
 class tic_tac_toe():
-    
+    '''TicTacToe playing class, contains board information, and will play against human
+       player, will actively try to lose the game, this challenge is difficult, and will
+       require understanding object oriented programming in python.
+    '''
     def __init__(self):
+        '''Constructor, will establish board state, and will determine whether the player
+           plays as X or O.
+        '''
         self.board = [[" "," "," "],
                       [" "," "," "],
                       [" "," "," "]]
@@ -13,6 +19,8 @@ class tic_tac_toe():
             self.AI = "O"
             
     def draw_board(self):
+        '''Draws board state to standard output, used by other prompts.
+        '''
         print "|--|--|--|"
         for line in self.board:
             print "|"+" |".join(line)+" |"
@@ -20,6 +28,10 @@ class tic_tac_toe():
         return
 
     def player(self):
+        '''Displays board state, and then asks player to make a move, delivers errors
+           if player requests an impossible position, and updates board when valid position
+           given.
+        '''
         while True:
             self.draw_board()
             print "Specify where you want to place your piece (you are "+self.play+"):"
@@ -40,6 +52,9 @@ class tic_tac_toe():
         return
 
     def score_position(self, x, y):
+        '''Scores positions by attractiveness, used by AI to determine worst possible
+           place to play.
+        '''
         score = -5
         AIbias = 15
         playbias = 10
@@ -63,6 +78,8 @@ class tic_tac_toe():
         return abs(score)
 
     def play_AI(self):
+        '''Determines worst possible place for the AI to play and then plays it.
+        '''
         score_list = []
         for xval in xrange(3):
             for yval in xrange(3):
@@ -74,34 +91,32 @@ class tic_tac_toe():
         return
 
     def win_condition(self):
+        '''Determines whether or not a player has won, prints winning message to standard
+           output and returns boolean for main game engine.
+        '''
         for val in xrange(3):
-            if self.board[val].count("X") == 3:
+            if (self.board[val].count("X") == 3 or
+                [line[val] for line in self.board].count("X") == 3):
                 print "X wins!"
                 return False
-            if self.board[val].count("O") == 3:
+            if (self.board[val].count("O") == 3 or
+                [line[val] for line in self.board].count("O") == 3):
                 print "O wins!"
                 return False
-            if [line[val] for line in self.board].count("X") == 3:
-                print "X wins!"
-                return False
-            if [line[val] for line in self.board].count("O") == 3:
-                print "O wins!"
-                return False
-        if [self.board[v][v] for v in xrange(3)].count("X") == 3:
+        if ([self.board[v][v] for v in xrange(3)].count("X") == 3 or
+            [self.board[-(v+1)][v] for v in xrange(3)].count("X") == 3):
             print "X wins!"
             return False
-        if [self.board[v][v] for v in xrange(3)].count("O") == 3:
-            print "O wins!"
-            return False
-        if [self.board[-(v+1)][v] for v in xrange(3)].count("X") == 3:
-            print "X wins!"
-            return False
-        if [self.board[-(v+1)][v] for v in xrange(3)].count("O") == 3:
+        if ([self.board[v][v] for v in xrange(3)].count("O") == 3 or
+            [self.board[-(v+1)][v] for v in xrange(3)].count("O") == 3):
             print "O wins!"
             return False
         return True
 
     def play_game(self):
+        '''Plays the game!, uses move updaters for player and AI until either a win condition
+           or a draw condition is reached.
+        '''
         counter = 0
         if self.AI == "X":
             self.play_AI()
