@@ -3,7 +3,7 @@ import sys
 
 def deg_to_rad(deg):
     
-    return '{0:.1f} deg = {1:.1f} rad'.format(float(deg),(float(deg)*np.pi))
+    return float(deg)*np.pi/180
 
 if __name__ == "__main__":
-    print(deg_to_rad(sys.argv[1]))
+    print('{0} deg = {1:.2f} rad'.format(sys.argv[1], deg_to_rad(sys.argv[1])))
