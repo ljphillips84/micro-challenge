@@ -7,4 +7,4 @@
 
 ## Resources
 
-  + [https://en.wikipedia.org/wiki/Rosenbrock_function](Wikepedia)
+  + [https://en.wikipedia.org/wiki/Rosenbrock_function](https://en.wikipedia.org/wiki/Rosenbrock_function)
