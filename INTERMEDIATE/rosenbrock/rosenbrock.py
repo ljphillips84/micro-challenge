@@ -21,18 +21,13 @@ def plot3D(x, y, func):
     X, Y = np.meshgrid(x, y)
     z = []
     for x, y in zip(X.ravel(), Y.ravel()):
-        z.append(rosen(x, y))
+        z.append(func(x, y))
     Z = griddata(X.ravel(), Y.ravel(), z, X, Y, interp="linear")
     ax.plot_surface(X, Y, Z, cmap = cm.jet)
     plt.show()
-    
-    #ax.plot_surface(X, Y, Z)
-    #plt.show()
-
-
 
 if __name__ == "__main__":
-    x = y = np.linspace(-1, 1, 100)
+    x = y = np.linspace(-3, 3, 100)
     plot3D(x, y, rosen)
     
 
