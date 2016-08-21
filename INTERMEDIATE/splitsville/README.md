@@ -10,5 +10,9 @@
 
   + EASY/read_data
 
+## Resources
+
+  + [Iterators, Generators and Decorators](http://pymbook.readthedocs.io/en/latest/igd.html)
+
 
 
