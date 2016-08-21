@@ -1,6 +1,6 @@
 # Plot File
 
-This easy challenge gets you to plot a single transmissions spectrum measured from a thin-film (probably ZnO). The challenge builds on the "Read File" challenge and you should strive to use your original solution without having to reproduce your code (i.e. import your "read file" solutions into your "plot file" script.
+This challenge gets you to plot a single transmissions spectrum measured from a thin-film (probably ZnO). The challenge builds on the "Read File" challenge and you should strive to use your original solution without having to reproduce your code (i.e. import your "read file" solutions into your "plot file" script.
 
 
 ## Objectives
