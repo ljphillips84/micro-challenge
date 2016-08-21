@@ -2,10 +2,18 @@ import numpy as np
 import sys
 
 def deg_to_rad(deg):
-    '''input angle in degrees
-       return rad
     '''
+    Takes an input in degrees
+    Returns value in radians
+    '''
+    
     return 
 
-if __name__ = "__main__":
-    print(deg_to_rad(sys.argv[1]))
+def rad_to_deg(rad):
+    '''
+    Takes an input in radians
+    returns value in degrees
+    '''
+
+    return 
+
