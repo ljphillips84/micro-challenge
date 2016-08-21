@@ -11,11 +11,13 @@ import numpy as np
 from read_data import *
 import matplotlib.pyplot as plt
 
-def plot_file(fPath, xlabel='', ylabel=''):
+def plot_file(fPath, xlabel='', ylabel='', sPath=None):
     '''
-    Plots a comma separated .txt or .csv file
+    Plots data  comma separated .txt or .csv file
     Uses solution to read_data challenge to read/format data
-    extra parameters available for x/y labels
+    fPath - path to data file
+    xlabel - string label for x-axis
+    ylabel - string label for y-axis
+    sPath - path to save output .png file
     '''
-
 
