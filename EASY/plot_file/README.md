@@ -1,16 +1,18 @@
-# Read File
+# Plot File
 
-As scientists, the ability to read raw data from a file using Python is a must have. Once you can read the data you can do whatever you like with it e.g. transformations, plots, statistics. 
+This easy challenge gets you to plot a single transmissions spectrum measured from a thin-film (probably ZnO). The challenge builds on the "Read File" challenge and you should strive to use your original solution without having to reproduce your code (i.e. import your "read file" solutions into your "plot file" script.
+
 
 ## Objectives
 
-  + Read in a data file - "transmission.csv" - real data from PV labs
-  + Generate a list of row data - e.g. [[x1, y1], [x2, y2] ... [xn, yn]]
-  + Generate a list of column data - e.g. [[x1, x2 ... xn], [y1, y2 ... yn]]
+  + Import your read file module
+  + Write a function that generates a simple line plot of the data contained in "transmission.csv"
+  + Don't forget to label the axis of you plot! (Not doing so is a cardinal sin)
+  + Include the option to save the plot as a .png file
 
 ## Recommended Pre-requisites
 
-  + None
+  + Read File
 
 ## Resources
 

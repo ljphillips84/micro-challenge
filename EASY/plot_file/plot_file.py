@@ -11,10 +11,10 @@ import numpy as np
 from read_data import *
 import matplotlib.pyplot as plt
 
-def plot_file(fPath, xlabel='', ylabel=''):
+def plot_file(fPath, xlabel='', ylabel='', sPath=None):
     '''
-    Plot a comma separated .txt or .csv file
-    Use solution to read_data challenge to read/format data
+    Plots data  comma separated .txt or .csv file
+    Uses solution to read_data challenge to read/format data
     '''
     fig = plt.figure() # define figue object
     ax = fig.add_subplot(111) # add axis
@@ -23,7 +23,11 @@ def plot_file(fPath, xlabel='', ylabel=''):
     # set axis labels
     ax.set_xlabel(xlabel)
     ax.set_ylabel(ylabel)
-    plt.show() # don't forgot to show the plot
+    if sPath: # if sPath is specified
+        print('... saving file')
+        fig.savefig(sPath) # save file to specified path
+    else:
+        plt.show() # don't forgot to show the plot
 
 if __name__ == "__main__":
     try:
@@ -34,6 +38,10 @@ if __name__ == "__main__":
         ylabel = sys.argv[3]
     except:
         ylabel = ''
+    try:
+        save = sys.argv[4]
+    except:
+        save = None
 
-    plot_file(sys.argv[1], xlabel, ylabel)
+    plot_file(sys.argv[1], xlabel, ylabel, save)
 
