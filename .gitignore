@@ -48,3 +48,4 @@ Temporary Items
 
 # Addional py extensions
 *.pyc
+__pycache__
