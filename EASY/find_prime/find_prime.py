@@ -4,13 +4,6 @@ def random_list(N):
     '''
     return random_list
 
-def list_sort(input_list, order="lh"):
-    '''
-    Function returns a list of sorted integers
-    List order specified by 'lh' - low to high
-    or 'hl' high to low
-    '''
-    return sorted_list
 
 def find_prime(input_list):
     '''
