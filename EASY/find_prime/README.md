@@ -4,8 +4,7 @@ The challenge is designed to get you used to creating, handling and searching li
 
 # Objectives
 
-  + Create a list of 1000 random integers
-  + Sort the list from low to high
+  + Create a list of 1000 random integers, each with a value between 1, 1e6.
   + Find all the prime numbers in the list
 
 # Pre-requisites
