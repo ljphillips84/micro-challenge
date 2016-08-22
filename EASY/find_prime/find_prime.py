@@ -5,9 +5,16 @@ def random_list(N):
     return random_list
 
 
-def prime_list(input_list):
+def is_prime(p):
     '''
-    Function finds all primes in a list of integers
-    and returns sublist containing primes
+    Checks to see whether a number is prime
+    Returns True or False
     '''
-    return prime_list
+    return 
+
+def find_max_prime(rList):
+    '''
+    Returns the largest prime number in a random list
+    of integers.
+    '''
+    return 
