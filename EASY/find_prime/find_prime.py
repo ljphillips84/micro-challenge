@@ -5,7 +5,7 @@ def random_list(N):
     return random_list
 
 
-def find_prime(input_list):
+def prime_list(input_list):
     '''
     Function finds all primes in a list of integers
     and returns sublist containing primes
