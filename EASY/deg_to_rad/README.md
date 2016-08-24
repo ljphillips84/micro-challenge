@@ -14,7 +14,3 @@ The simple challenge simply gets you to convert degrees into radians (or vice ve
 ## Resources
 
   + Video Walkthrough
-
-
-
-
